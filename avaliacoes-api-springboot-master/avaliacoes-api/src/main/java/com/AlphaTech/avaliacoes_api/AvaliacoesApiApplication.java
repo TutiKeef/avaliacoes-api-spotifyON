@@ -11,3 +11,4 @@ public class AvaliacoesApiApplication {
 	}
 
 }
+//Fazer as modificações para que consigamos gerar uma lista de albuns ligada aos perfis, lista de amizade ja esta resolvida

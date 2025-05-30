@@ -11,7 +11,7 @@
 	<groupId>com.AlphaTech</groupId>
 	<artifactId>avaliacoes-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>avaliacoes-api</name>
+	<nome>avaliacoes-api</nome>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

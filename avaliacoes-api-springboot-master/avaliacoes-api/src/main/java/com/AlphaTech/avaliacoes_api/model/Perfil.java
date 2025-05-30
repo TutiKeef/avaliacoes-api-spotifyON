@@ -1,8 +1,8 @@
 package com.AlphaTech.avaliacoes_api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -10,21 +10,27 @@ import java.util.Objects;
 @Entity
 @Table(name = "Perfil_table")
 public class Perfil {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
-private String name;
-private String Email;
-private Long Celphone;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String email;
+    private Long celphone;
 
     @ManyToMany
+    @JsonIgnoreProperties("amigos") // Evita loop infinito ao serializar
     private List<Perfil> amigos = new ArrayList<>();
 
+    public Perfil() {
+    }
 
-    public Perfil(String name, Long id, String email, Long Celphone) {
-        this.name = name;
+    public Perfil(String nome, Long id, String email, Long celphone) {
+        this.nome = nome;
         this.id = id;
-        Email = email;
+        this.email = email;
+        this.celphone = celphone;
     }
 
     public Long getId() {
@@ -35,28 +41,36 @@ private Long Celphone;
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public Long getCelphone() {
-        return Celphone;
+        return celphone;
     }
 
     public void setCelphone(Long celphone) {
-        Celphone = celphone;
+        this.celphone = celphone;
+    }
+
+    public List<Perfil> getAmigos() {
+        return amigos;
+    }
+
+    public void setAmigos(List<Perfil> amigos) {
+        this.amigos = amigos;
     }
 
     public void adicionarAmigo(Perfil amigo) {
