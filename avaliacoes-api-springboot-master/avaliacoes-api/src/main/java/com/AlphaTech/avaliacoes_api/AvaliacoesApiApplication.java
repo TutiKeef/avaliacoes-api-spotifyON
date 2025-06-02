@@ -2,7 +2,7 @@ package com.AlphaTech.avaliacoes_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//version. 0.5
 @SpringBootApplication
 public class AvaliacoesApiApplication {
 
@@ -11,4 +11,4 @@ public class AvaliacoesApiApplication {
 	}
 
 }
-//Fazer as modificações para que consigamos gerar uma lista de albuns ligada aos perfis, lista de amizade ja esta resolvida
+
