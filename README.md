@@ -1,3 +1,7 @@
+Projeto desenvolvido para criar o backend de um aplicativo de avaliações de albuns de músicas, conectado a uma api do spotify para o uso de dados.
+
+
+
 Todo o beckend esta pronto, e conta com as seguintes funiconalidades:
 Criar Perfil
 Adicionar amigos
